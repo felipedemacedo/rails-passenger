@@ -31,7 +31,7 @@ ENV TINI_SUBREAPER=
 RUN mkdir -p /usr/local/bundle/gems/passenger-5.1.4/buildout/ruby/ruby-2.2.7-x86_64-linux
 RUN chown felipe /usr/local/bundle/gems/passenger-5.1.4/buildout/ruby/ruby-2.2.7-x86_64-linux
 RUN apt-get update
-RUN apt-get install -y gcc make
+RUN apt-get install -y gcc make cron
 ########################
 
 # bin/rake db:migrate RAILS_ENV=production;
