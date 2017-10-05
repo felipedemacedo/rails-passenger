@@ -9,7 +9,7 @@ EXPOSE 3000
 RUN groupadd -r felipe && useradd -r -g felipe felipe
 
 ######PASSENGER#########
-ENV PASSENGER_VERSION 5.1.4
+ENV PASSENGER_VERSION 5.1.6
 
 RUN buildDeps=' \
 		make \
