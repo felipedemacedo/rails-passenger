@@ -35,4 +35,4 @@ RUN apt-get install -y gcc make cron vim
 ########################
 
 # bin/rake db:migrate RAILS_ENV=production;
-CMD ["bash" , "-c" , "bundle install; /etc/init.d/cron start; passenger start; tail -f /git/automation/passenger.3000.log"]
+CMD ["bash" , "-c" , "bundle install; /etc/init.d/cron start; rails -b 0.0.0.0 -p 3000]
