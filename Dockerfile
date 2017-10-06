@@ -31,8 +31,8 @@ ENV TINI_SUBREAPER=
 RUN mkdir -p /usr/local/bundle/gems/passenger-5.1.4/buildout/ruby/ruby-2.2.7-x86_64-linux
 RUN chown felipe /usr/local/bundle/gems/passenger-5.1.4/buildout/ruby/ruby-2.2.7-x86_64-linux
 RUN apt-get update
-RUN apt-get install -y gcc make cron
+RUN apt-get install -y gcc make cron vim
 ########################
 
 # bin/rake db:migrate RAILS_ENV=production;
-CMD ["bash" , "-c" , "bundle install; passenger start; tail -f /git/automation/passenger.3000.log"]
+CMD ["bash" , "-c" , "bundle install; /etc/init.d/cron start; passenger start; tail -f /git/automation/passenger.3000.log"]
